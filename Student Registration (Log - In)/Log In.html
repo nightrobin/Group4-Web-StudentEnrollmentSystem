@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="Robinson University" content="Student Sign In Form">
-        <TITLE>Robinson University Login Form</TITLE>
+        	<TITLE>Robinson University Login Form</TITLE>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	</head>
@@ -112,6 +112,7 @@
 				border-style: groove;
 				border-width: 5px;
 				border-color: #b2ab8c;
+				margin-top: 10%;
 				margin-left: 75%;
 				margin-bottom: 5%;
 				height: 40%;
@@ -193,11 +194,13 @@
 			</div>
 		</nav>
 		
-		<br><br><br>
-		
-		<div>
-			<img src="header.png" style="margin-left: 3%;">	
-		</div>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
+			<img src="header.png" style="margin-left: 0px;">	
+				<a class="py-2 d-none d-md-inline-block" href="#">ACADEMICS</a>
+				<a class="py-2 d-none d-md-inline-block" href="#">ADMISSIONS</a>
+				<a class="py-2 d-none d-md-inline-block" href="#">RESEARCH</a>
+				<a class="py-2 d-none d-md-inline-block" href="#">NEWS</a>
+		</nav>
 
 		<form action="/action_page.php">
 			<div id="bodyContainer">
@@ -219,8 +222,6 @@
 				<p>Don't have an account? <a href="#">Sign Up</a>.</p>
 			</div>
 		</form>
-		
-		<br>
 		
 		<footer class="container-fluid">
 			<p>© Company 2021-2022</p>
