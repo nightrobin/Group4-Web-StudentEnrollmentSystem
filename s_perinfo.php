@@ -1,16 +1,27 @@
 <?php
+session_start();
+
+  if (isset($_SESSION['lrn'])) {
+    header('location: chooseCourse.php');
+  }
+  else if (isset($_POST['lrn'])) {
+    $lrn = $_POST['lrn'];
+    $_SESSION['lrn'] = $lrn;
+  }
+
 
 require_once "config.php";
 
 if($_POST){
   	$lrn = $_POST['lrn'];
+    $email = $_POST['email'];
   	$sql = "SELECT * FROM personalinfo WHERE lrn='$lrn'";
   	$results = mysqli_query($con, $sql);
   	if (mysqli_num_rows($results) > 0) {
   	  echo '<script>alert("You are already registered.") </script>';
       echo '<script>window.location = "login.php"</script>';
-  	}else{
-
+    }
+     else {
           $fname = $_POST['fname'];
           $lname = $_POST['lname'];
           $mname = $_POST['mname'];
@@ -46,12 +57,11 @@ if($_POST){
                         '$fathname','$mothname','$fathnum','$mothnum','$gname','$gnum','$schcateg','$lschname','$lastschadd','$ave');";
 
                       mysqli_query($con, $sql);
-                        header("location: chooseCourse.php?reg=success");
+                        header("location: chooseCourse.php?info=success");
 
   	}
   	exit();
   }
-
 
 
   ?>

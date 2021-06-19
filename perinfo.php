@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -41,23 +40,6 @@
 		  background-color: #DBE6FD;
 		  color: #293B5F;
 		}
-		
-		h4{
-		color: #293B5F;
-		font-family: Sans-Serif;
-		font-weight: bold;
-		}
-		
-		.btn{
-		background-color: #293B5F;
-		color: white;
-		border: 1px solid #DBE6FD;
-		}
-		
-		.btn:hover {
-		background-color: #B2AB8C;
-		color:white;
-		}
 
 
 	</style>
@@ -70,9 +52,9 @@
 			</nav>
 
 			<div class="container-fluid py-3">
-			
+
             <form method="POST" action="s_perinfo.php">
-                <h4 style="margin-top: 100px;">PERSONAL INFORMATION</h4>
+                <h1>PERSONAL INFORMATION</h1>
                 <div class="row ml-2">
 
                     <div class="col-md-1">
@@ -238,7 +220,7 @@
                 </div>
 
 
-                <h4>FAMILY BACKGROUND</h4>
+                <h1>FAMILY BACKGROUND</h1>
                 <div class="row ml-2">
                     <div class="col-md-6">
                         <div class="row">
@@ -300,7 +282,7 @@
                 </div>
 
 
-                <h4>EDUCATIONAL BACKGROUND</h4>
+                <h1>EDUCATIONAL BACKGROUND</h1>
                 <div class="row ml-2">
                     <div class="col-md-6">
 
@@ -360,11 +342,8 @@
             </form>
         </div>
 
-
-
-
 			<footer class="container">
-			  <center><p>© Robinson University 2021-2022</p></center>
+			  <center><p>© Company 2021-2022</p></center>
 			</footer>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
