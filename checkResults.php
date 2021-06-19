@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	$_SESSION['lrn'];
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -25,12 +31,12 @@
 		color: white;
 		border-color: #dbe6fd;
 		}
-		
+
 		.btn-outline-secondary:hover{
 		color: white;
 		border-color: #dbe6fd;
 		}
-		
+
 		.image{
 		border-style: solid;
 		border:7px solid #45352D;
@@ -43,7 +49,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		}
-		
+
 		div.one{
 		border-radius: 25px;
 		width: 50%;
@@ -57,7 +63,7 @@
 		background-color: #D4AF37;
 		color: white;
 		}
-		
+
 		#clearfieldBtn:hover{
 		background-color:#47597e;
 		border-color: #dbe6fd;
@@ -67,7 +73,7 @@
 		background-color: #D4AF37;
 		color: white;
 		}
-		
+
 		#loginBtn:hover{
 		background-color:#47597e;
 		border-color: #dbe6fd;
@@ -75,12 +81,12 @@
 
 		.navActive{
 		font-weight: bold;
-		color: #293b5f;	
+		color: #293b5f;
 		text-decoration: underline;
 		}
-		
+
 	</style>
-	
+
 	<body>
 		<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,61 +111,49 @@
 					</div>
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
-				<img src="header.png" style="margin-left: 0px;">	
+				<img src="header.png" style="margin-left: 0px;">
 					<a class="py-2 d-none d-md-inline-block" href="#">ACADEMICS</a>
 					<a class="py-2 d-none d-md-inline-block" href="#">ADMISSIONS</a>
 					<a class="py-2 d-none d-md-inline-block" href="3">RESEARCH</a>
 					<a class="py-2 d-none d-md-inline-block" href="#">NEWS</a>
 					<a class="py-2 d-none d-md-inline-block navActive" href="#">LOGIN</a>
 			</nav>
-			
+
 			<br><br><br><br><br><br>
 				<div id ="bodyContainer">
 					<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" id="bg">
 						<div class="one">
-							    <form class="form-signin">
+
+							    <form class="form-signin" method="POST" action="s_results.php">
 								  <div class="text-center mb-4">
 									<img class="mb-4" src="https://www.pikpng.com/pngl/b/80-805068_profile-icon-png.png" alt="" width="72" height="72">
 									<h1 class="h3 mb-3 font-weight-heavy">PASSERS</h1>
 								 </div>
-
-
-								  	<div class="form-label-group">
+								<div class="form-label-group">
 										<label for="inputNumber">ENTER LRN TO CHECK RESULTS</label>
-									</div>
-	
+								</div>
 								<div class="row justify-content-center">
 								  		<div class="form-group centered">
     										<div class="col-sm-12">
-                								<input type="text" id="inputNumber" class="form-control" placeholder="ENTER LRN" required autofocus>
+                								<input type="text" name="lrn" class="form-control" placeholder="ENTER LRN" required>
           									</div>
           								 </div>
-
 								  	<div>
-								  		<button class="btn btn-primary">Search</button>
+								  		<input type="submit" name="check" class="btn btn-primary" value="Search">
 								  		<br><br>
 								  	</div>
 								</div>
-								<p> //fullname</p>
-								<p> //sampleEmail</p>
-								</p> //student ID</p>
-								</p> //password </p>
-								
+								</form>
 
 								<u><p><i>We advise to change your password upon logging in.</i></p></u>
 
-								<div class="row justify-content-between">
-								  <div class="col-4">
-										<button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" href="checkResults.html" id="clearfieldBtn" type="reset">Clear Fields</button>
-									</div>
-
 									<div class="col-4">
-										<button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" id="loginBtn" href="login.html" type="submit">Back to Log In</button>
+										<a href="login.php"><button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" id="loginBtn">Back to Log In</button></a>
 									</div>
 								</div>
 									<br>
 
-								</form>
+
 						</div>
 					</div>
 				</div>
