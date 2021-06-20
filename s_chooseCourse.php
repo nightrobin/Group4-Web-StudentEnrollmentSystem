@@ -9,22 +9,19 @@
 
   $lrn = $_SESSION['lrn'];
 
-
   if($_POST){
     $first = $_POST['first'];
     $second = $_POST['second'];
     $third = $_POST['third'];
 
 
-      if ($first == $second || $first == $third || $second == $third) {
+      if ($first === $second || $first === $third || $second === $third) {
         echo '<script>alert("Choices must be different.") </script>';
         echo '<script>window.location = "chooseCourse.php"</script>';
       } else {
         $no = mt_rand(202100000, 202199999);
       $sid = $no;
       $password = $sid;
-      $college = null;
-      $sched = null;
       if ($first == "Bachelor of Science in Architecture") {
             $college = "CAUP";
             $sched = 1;

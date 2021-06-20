@@ -125,7 +125,7 @@
 
                     <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
 
-                      <button type="submit" class="btn btn-secondary -dark btn-block" role="button">SUBMIT APPLICATION</a><br>
+                      <button type="submit" name="submit" class="btn btn-secondary -dark btn-block" role="button">SUBMIT APPLICATION</a><br>
                     </div>
                     </div>
                       </form>
