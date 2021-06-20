@@ -137,8 +137,8 @@
 
 									<button class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" name="login" type="submit">Log in</button>
 									<a href="perinfo.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Register</a>
-									<a href="checkResults.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Check Result</a>
-									<br>
+									<a href="checkResults.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Check Result</a><br><br>
+									<p style="font-size: 14px;"><u><i> Note: New students are required to register first. </i></u></p>
 							</form>
 
 						</div>
