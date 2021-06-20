@@ -13,24 +13,24 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 	<style>
-		body{
-		background-color: #dbe6fd;
-		}
+	body{
+	  background-color: #dbe6fd;
+	}
 
-		.nav2{
-		background-color: white;
-		height: 85px;
-		width:100%;
-		position: static;
-		float: right;
-		display: inline-block;
-		}
+	.nav2{
+	  background-color: white;
+	  height: 85px;
+	  width:100%;
+	  position: static;
+	  float: right;
+	  display: inline-block;
+	}
 
-		.row{
-		margin:auto;
-		width:95%;
-    height: 600px;
-    padding: 15px;
+	.row{
+	  margin:auto;
+	  width:95%;
+      height: 600px;
+      padding: 15px;
 		}
     .btn-group {
       width: 100%;
@@ -82,6 +82,11 @@
       background-color: #B2AB8C;
       font-size: 27px;
     }
+	
+	.font{
+	  font-family: Serif;
+	  font-size: 18px;
+	}
 
 	</style>
 
@@ -89,8 +94,7 @@
 
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block" name = sid>Student Number: <?php echo $sid; ?></a>
-					<a class="py-2 d-none d-md-inline-block" href="logout.php">LOGOUT</a>
+					<a class="py-2 d-none d-md-inline-block font" name = sid>Student Number: <b><?php echo $sid; ?> </b></a>
 			</nav>
 
 <div class="row">

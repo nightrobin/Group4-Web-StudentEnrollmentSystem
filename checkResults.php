@@ -147,7 +147,7 @@
 
 								<u><p><i>We advise to change your password upon logging in.</i></p></u>
 
-									<div class="col-4">
+									<div  class="justify-content-center" style="width: 50%; margin: auto;">
 										<a href="login.php"><button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" id="loginBtn">Back to Log In</button></a>
 									</div>
 								</div>
