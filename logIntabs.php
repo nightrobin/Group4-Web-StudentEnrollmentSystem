@@ -1,3 +1,11 @@
+<?php
+	include_once 'config.php';
+	session_start();
+
+	  if (isset($_SESSION['sid'])) {
+		$sid = $_SESSION['sid'];
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -78,24 +86,29 @@
 	</style>
 
 	<body>
+
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
+					<a class="py-2 d-none d-md-inline-block" name = sid>Student Number: <?php echo $sid; ?></a>
+					<a class="py-2 d-none d-md-inline-block" href="logout.php">LOGOUT</a>
 			</nav>
 
 <div class="row">
   <div class="btn-group" role="group" aria-label="tabs">
-    <a href="viewInfo.html" class="btn btn-secondary" id = "bb1">STUDENT INFORMATION</a>
-    <a href="viewSched.html" class="btn btn-secondary" id = "bb2">ENROLL</a>
-    <a href="login.html" class="btn btn-secondary" id = "bb3">LOGOUT</a>
+    <a href="viewInfo.php" class="btn btn-secondary" id = "bb1">STUDENT INFORMATION</a>
+    <a href="viewSched.php" class="btn btn-secondary" id = "bb2">ENROLL</a>
+    <a href="logout.php" class="btn btn-secondary" id = "bb3">LOGOUT</a>
   </div>
 </div>
-
-
-
 
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
+
+<?php
+} else {
+	header('location: login.php');
+	exit();
+}?>

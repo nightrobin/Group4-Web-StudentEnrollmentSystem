@@ -44,28 +44,13 @@
 		background-size: cover;
 		}
 
-		div.one{
-		border-radius: 25px;
-		width: 30%;
-		padding: 20px;
-		margin-left: 70%;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-		background: rgb(219, 230, 253, 0.6)
-		}
-
-		#loginBtn{
+		#comingSoonBtn{
 		background-color: #D4AF37;
-		color: white;
 		}
 
-		#loginBtn:hover{
+		#comingSoonBtn:hover{
 		background-color:#47597e;
 		border-color: #dbe6fd;
-		}
-		.navActive{
-		font-weight: bold;
-		color: #293b5f;
-		text-decoration: underline;
 		}
 
 	</style>
@@ -81,10 +66,10 @@
 								<a class="nav-link active" href="#">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link">Features</a>
+								<a class="nav-link" href="#">Features</a>
 							</li>
 							<li class="nav-item">
-								 <a class="nav-link">Contact</a>
+								 <a class="nav-link" href="#">Contact</a>
 							</li>
 						</ul>
 							<form class="form-inline my-2 my-lg-0">
@@ -95,47 +80,51 @@
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block">ACADEMICS</a>
-					<a class="py-2 d-none d-md-inline-block">ADMISSIONS</a>
-					<a class="py-2 d-none d-md-inline-block">RESEARCH</a>
-					<a class="py-2 d-none d-md-inline-block"NEWS</a>
-					<a class="py-2 d-none d-md-inline-block navActive" href="login.html">LOGIN</a>
+					<a class="py-2 d-none d-md-inline-block" href="#">ACADEMICS</a>
+					<a class="py-2 d-none d-md-inline-block" href="#">ADMISSIONS</a>
+					<a class="py-2 d-none d-md-inline-block" href="3">RESEARCH</a>
+					<a class="py-2 d-none d-md-inline-block" href="#">NEWS</a>
+					<a class="py-2 d-none d-md-inline-block" href="login.html">LOGIN</a>
 			</nav>
+			<div>
+			</div>
 
 			<br><br><br><br><br><br>
 				<div id ="bodyContainer">
 					<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center" id="bg">
-						<div class="one">
-							    <form class="form-signin">
-								  <div class="text-center mb-4">
-									<img class="mb-4" src="https://www.pikpng.com/pngl/b/80-805068_profile-icon-png.png" alt="" width="72" height="72">
-									<h1 class="h3 mb-3 font-weight-normal">Welcome Student!</h1>
-								 </div>
-
-								  <div class="form-label-group">
-									<input type="email" id="inputEmail" class="form-control" placeholder="Student Number" required autofocus>
-									<label for="inputEmail">Student Number</label>
-								  </div>
-
-								  <div class="form-label-group">
-									<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-									<label for="inputPassword">Password</label>
-								  </div>
-
-								  <div class="checkbox mb-3">
-									<label>
-									  <input type="checkbox" value="remember-me"> Remember me
-									</label>
-								  </div>
-									<button class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="submit">Log in</button>
-									<a href="apply.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Register</a>
-									<a href="result.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Check Result</a>
-									<br>
-
-								</form>
-						</div>
+					  <div class="col-md-5 p-lg-5 mx-auto my-5">
+						<h1 class="display-4 font-weight-normal" style="color:white;">Enroll Now!</h1>
+						<p class="lead font-weight-normal" style="color:white;">Robinson University is now accepting enrollees for SY 2021-2020, starting from August 25 - September 1 2021. </p>
+						<a class="btn btn-outline-secondary btn-outline-secondary:hover" href="login.html" id="comingSoonBtn" style="color:white;">Proceed</a>
+					  </div>
+					  <div class="product-device box-shadow d-none d-md-block"></div>
+					  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
 					</div>
 				</div>
+
+		    <div class="container">
+				<!-- Example row of columns -->
+					<div class="row">
+						<div class="col-md-4">
+							<h2>Info</h2>
+								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+						</div>
+						<div class="col-md-4">
+							<h2>Info</h2>
+								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+						</div>
+						<div class="col-md-4">
+							<h2>Info</h2>
+								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+						</div>
+					</div>
+
+				<hr>
+
+			</div>
 			<footer class="container">
 			  <center><p>© Robinson University 2021-2022</p></center>
 			</footer>
