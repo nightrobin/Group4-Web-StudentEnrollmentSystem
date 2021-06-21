@@ -40,6 +40,23 @@
 		  background-color: #DBE6FD;
 		  color: #293B5F;
 		}
+		
+		h4{
+		color: #293B5F;
+		font-family: Sans-Serif;
+		font-weight: bold;
+		}
+		
+		.btn{
+		background-color: #293B5F;
+		color: white;
+		border: 1px solid #DBE6FD;
+		}
+		
+		.btn:hover {
+		background-color: #B2AB8C;
+		color:white;
+		}
 
 
 	</style>
@@ -54,7 +71,7 @@
 			<div class="container-fluid py-3">
 
             <form method="POST" action="s_perinfo.php">
-                <h1>PERSONAL INFORMATION</h1>
+                <h4 style="margin-top: 100px;">PERSONAL INFORMATION</h4>
                 <div class="row ml-2">
 
                     <div class="col-md-1">
@@ -220,7 +237,7 @@
                 </div>
 
 
-                <h1>FAMILY BACKGROUND</h1>
+                <h4>FAMILY BACKGROUND</h4>
                 <div class="row ml-2">
                     <div class="col-md-6">
                         <div class="row">
@@ -282,7 +299,7 @@
                 </div>
 
 
-                <h1>EDUCATIONAL BACKGROUND</h1>
+                <h4>EDUCATIONAL BACKGROUND</h4>
                 <div class="row ml-2">
                     <div class="col-md-6">
 

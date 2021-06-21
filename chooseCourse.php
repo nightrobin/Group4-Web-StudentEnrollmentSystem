@@ -31,7 +31,19 @@
           .rightside {
           background-color:white;
           width: 550px;
+		  height: 680px;
           }
+		  
+		.btn{
+		background-color: #293B5F;
+		color: white;
+		border: 1px solid #DBE6FD;
+		}
+		
+		.btn:hover {
+		background-color: #B2AB8C;
+		color:white;
+		}
         </style>
 
       <div class="container">

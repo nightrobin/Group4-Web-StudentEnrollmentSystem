@@ -139,6 +139,7 @@
 									<a href="perinfo.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Register</a>
 									<a href="checkResults.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Check Result</a><br><br>
 									<p style="font-size: 14px;"><u><i> Note: New students are required to register first. </i></u></p>
+									<p style="font-size: 14px;"> Upon registration, click 'Check Results' button for your Student ID.</p>
 							</form>
 
 						</div>
