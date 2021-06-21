@@ -65,13 +65,13 @@
 		}
 
 		li a.active {
-		  background-color:  #47597E;
-		  color: white;
+		background-color:  #47597E;
+		color: white;
 		}
 
 		li a:hover:not(.active) {
-		  background-color: #DBE6FD;
-		  color: #293B5F;
+		background-color: #DBE6FD;
+		color: #293B5F;
 		}
 
 		#mainPanel{
@@ -81,7 +81,7 @@
 		right: 0px;
 		bottom:0px;
 		float: right;
-		height: 650px;
+		height: 770px;
 		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
@@ -112,25 +112,40 @@
 		}
 
 		.c1{
-		width:25%;
+		width:15%;
 		font-family: sans-serif;
-		font-size: 12px;
+		padding-left: 5px;
 		}
 		.c2 .c4{
 		width: 5%;
 		font-family: sans-serif;
-		font-size: 12px;
 		}
+		.c2{
+		text-align:center;
+		}
+		
+		.c4{
+		text-align:center;
+		}
+		
 		.c3{
 		width: 35%;
 		font-family: sans-serif;
-		font-size: 12px;
+		padding-left: 5px;
 		}
-		.c5 .c6 .c7{
-		width: 10%;
-		font-family: sans-serif;
-		font-size: 12px;
+		
+		.c5{
+		padding-left: 5px;
+		}		
+		
+		.c6{
+		padding-left: 5px;
+		}		
+		
+		.c7{
+		padding-left: 5px;
 		}
+		
 
 		.Bg {
 		margin: auto;
@@ -154,6 +169,11 @@
 		font-size: 17px;
 		font-weight: bold;
 		}
+		
+		.font3{
+		font-family: Serif; 
+		font-size: 12px;
+		}
 
 		td{
 		height: 30px;
@@ -162,14 +182,14 @@
 		.payment{
 		float: right;
 		border: 1px solid black;
-		width:30%;
+		width:28%;
 		margin-top:20px;
 		font-size: 13px;
 		}
 
 		.sched{
 		float: left;
-		width: 60%;
+		width: 65%;
 		}
 
 
@@ -237,15 +257,15 @@
 							<div class="sched">
 							<h4 style="font-family: Serif; font-weight: bold; margin-left: 230px; margin-top: 20px;"> CLASS SCHEDULE </h4>
 
-								<table width="100%" style="margin-left: 50px; margin-top: 20px;" border="1">
+								<table width="100%" style="margin-left: 50px; margin-top: 20px;" class="font3" border="1">
 									<tr>
-										<th class="c1" style="font-family: Serif; font-size: 12px;">Subject Code</th>
+										<th class="c1" style="font-family: Serif; font-size: 12px; text-align: center;">Subject Code</th>
 										<th class="c2" style="font-family: Serif; font-size: 12px;">Sec.</th>
-										<th class="c3" style="font-family: Serif; font-size: 12px;">Subject Title</th>
+										<th class="c3" style="font-family: Serif; font-size: 12px; text-align: center;">Subject Title</th>
 										<th class="c4" style="font-family: Serif; font-size: 12px;">Units</th>
-										<th class="c5" style="font-family: Serif; font-size: 12px;">Day</th>
-										<th class="c6" style="font-family: Serif; font-size: 12px;">Time</th>
-										<th class="c7" style="font-family: Serif; font-size: 12px;">Room</th>
+										<th class="c5" style="font-family: Serif; font-size: 12px; text-align: center;">Day</th>
+										<th class="c6" style="font-family: Serif; font-size: 12px; text-align: center;">Time</th>
+										<th class="c7" style="font-family: Serif; font-size: 12px; text-align: center;">Room</th>
 									</tr>
 									<?php
 									$sql2 = "SELECT * FROM schedules WHERE sets = '$sched' ";
