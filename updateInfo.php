@@ -265,7 +265,7 @@
 											<div class="col-md-5">BIRTHDATE (YEAR/MONTH/DATE)*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="date" class="form-control fieldFont" name="bday" readonly value="<?php echo $row['birthdate']; ?>">
+													<input type="date" readonly class="form-control color fieldFont" style=" background-color: #293B5F;" name="bday" value="<?php echo $row['birthdate']; ?>">
 												</div>
 											</div>
 										</div>
@@ -292,7 +292,7 @@
 											<div class="col-md-5">RELIGION</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="rel" readonly value="<?php echo $row['religion']; ?>">
+													<input type="text" class="form-control fieldFont" name="rel" style=" background-color: #293B5F;" readonly value="<?php echo $row['religion']; ?>">
 												</div>
 											</div>
 										</div>
@@ -312,7 +312,7 @@
 											<div class="col-md-4">SEX*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="age" required readonly value="<?php echo $row['seks']; ?>">
+													<input type="text" readonly class="form-control fieldFont" style=" background-color: #293B5F; color:white;" name="age" required  value="<?php echo $row['seks']; ?>">
 												</div>
 											</div>
 										</div>

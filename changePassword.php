@@ -126,7 +126,9 @@
 		.td2{
         color: white;
         font-size:13px;
-        text-align: center;
+        text-align: left;
+		padding: 3%;
+		width:40%;
         }
 
 		.changePasswordDiv {
@@ -134,14 +136,14 @@
 		border: 1px solid #47597E;
         border-style: solid;
 		width: 90%;
-		height: 490px;
+		height: 450px;
 		}
 
 		.changePasswordBg {
 		width: 85%;
-		height: 200px;
+		height: 280px;
 		background-color: #B2AB8C;
-        border-style: solid;
+        border:1px solid black;
 		float: 50%;
 		}
 
@@ -151,11 +153,26 @@
 		}
 
 		.error {
-			background: #F2DEDE;
-			color: #A94442;
-			padding: 10px;
+			background: #47597E;
+			color: white;
+			padding: 8px;
+			margin: auto;
 			width: 95%;
 			border-radius: 5px;
+			text-align: center;
+		}
+		
+		.updatebtn{
+			background-color: #293B5F;
+			color: white;
+			height: 30px;
+			border: 1px solid #DBE6FD;
+		}
+		
+		.updatebtn:hover {
+			background-color: #47597E;
+			color: white;
+			border: 1px solid #293B5F;
 		}
 
 	</style>
@@ -247,14 +264,14 @@
 					<div id="mainPanel" >
 						<br><br>
 						<div class="changePasswordDiv">
-							<div class="row" style="width: 100%; padding: 2%; text-align: center; ">
+							<div class="row" style="width: 100%; text-align: center; ">
 								<div class="column3">
 									<h3 class = h3> CHANGE PASSWORD </h3><br>
 									<p style="margin-left: 20px; margin-right: 20px; font-size: 13px; text-align: justify;">
 										You can now personalize your user password to make it easier for you to remember. However, you should ensure that it is not too easy for anyone else to guess!<BR><BR> Your password must be at least 8-20 characters long. Making your password difficult for anyone else to crack will secure your CRS data.
 									</p>
 								</div>
-								<div class="column4" align=center><br><br><br><br><br>
+								<div class="column4" align=center><br><br><br>
 									<div class="changePasswordBg">
                                         <table style="width: 95%; margin: auto;">
                                                 <tr>
@@ -263,34 +280,34 @@
 																										<p class="error"> <?php echo $_GET['error']; ?></p>
 																									<?php } ?>
 																									<form class="" action="s_changepass.php" method="post">
-                                                <table>
+                                                <table  style="margin: auto; margin-top: 15px;" width="95%;">
                                                 <tr>
-                                                    <td class = td2 colspan=2  align=center>
-                                                    Student no: <?php echo $sid; ?>
+                                                    <td style="text-align:center;"  colspan=2>
+                                                    <b>Student no: <?php echo $sid; ?></b>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class = td2>Current Password: </td>
+                                                    <td class="td2">Current Password: </td>
                                                     <td>
-                                                <input type=password name="oldpass" maxlength=20 min="8" size=40 required>
+														<input style="float: right;" type=password name="oldpass" maxlength=20 min="8" size=35 required>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class = td2>New Password: </td>
+                                                    <td class="td2">New Password: </td>
                                                     <td>
-                                                    <input type=password name="newpass" maxlength=20 min="8" size=40 required>
+														<input style="float: right;" type=password name="newpass" maxlength=20 min="8" size=35 required>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class = td2> Confirm Password: </td>
+                                                    <td class="td2"> Confirm Password: </td>
                                                     <td>
-                                                    <input type=password name="confpass" maxlength=20 size=40 required>
+														<input style="float: right;" type=password name="confpass" maxlength=20 size=35 required>
                                                     </td>
                                                 </tr>
                                                 <tr><td><br></td></tr>
                                                 <tr>
-                                                    <td class = td2 colspan=2>
-                                                <input type= "submit" name="update" value="UPDATE PASSWORD"  class="subbttn">
+                                                    <td style="text-align:center;" colspan=2>
+														<input type= "submit" name="update" value="UPDATE PASSWORD"  class="updatebtn">
                                                     </td>
                                                 </tr>
                                                 </table>

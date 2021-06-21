@@ -83,14 +83,11 @@
 		right: 0px;
 		bottom:0px;
 		float: right;
-		height: 600px;
+		height: 650px;
 		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 
-		div{
-
-		}
 		.row{
 		margin:auto;
 		width:95%;
@@ -121,25 +118,35 @@
 		color: white;
 		}
 		.c1{
-		width:25%;
+		width:15%;
 		}
 		.c2 .c4{
 		width: 5%;
 		}
+		.c4{
+			text-align:center;
+		}
+		.c5{
+			text-align:center;
+			width: 10%;
+		}
+		.c6{
+			margin-left: 10px;
+		}
 		.c3{
-		width: 35%;
+		width: 30%;
 		}
-		.c5 .c6 .c7{
-		width: 10%;
+		.c6 .c7{
+		width: 15%;
 		}
-
+		
 	</style>
 
 	<body>
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
+					<a class="py-2 d-none d-md-inline-block font" name = sid>Student Number: <b><?php echo $sid; ?> </b></a>
 			</nav>
 			<div class="row">
 				<div class="column1">
@@ -157,13 +164,13 @@
 						<br>
 						<table style="width:90%; margin:auto;">
 							<tr>
-								<th class="c1">Subject Code</th>
-								<th class="c2">Sec.</th>
+								<th class="c1" style="text-align: left;">Subject Code</th>
+								<th class="c2" style="text-align: left;">Sec.</th>
 								<th class="c3">Subject Title</th>
-								<th class="c4">Units</th>
+								<th class="c4" style="text-align: center;">Units</th>
 								<th class="c5">Day</th>
 								<th class="c6">Time</th>
-								<th class="c7">Room</th>
+								<th class="c7" style="text-align: left;">Room</th>
 							</tr>
 							<?php
 							$sql2 = "SELECT * FROM schedules WHERE sets = '$sched' ";

@@ -156,7 +156,7 @@
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
+					<a class="py-2 d-none d-md-inline-block font" name = sid>Student Number: <b><?php echo $sid; ?> </b></a>
 			</nav>
 			<div class="row">
 				<div class="column1">
