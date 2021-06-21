@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2021 at 02:01 PM
+-- Generation Time: Jun 21, 2021 at 06:25 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -45,14 +45,14 @@ CREATE TABLE `personalinfo` (
   `weight` int(5) NOT NULL,
   `religion` varchar(150) NOT NULL,
   `civil_status` varchar(150) NOT NULL,
-  `cpnum` int(15) NOT NULL,
+  `cpnum` bigint(15) NOT NULL,
   `email` varchar(150) NOT NULL,
   `fathername` varchar(250) NOT NULL,
   `mothername` varchar(250) NOT NULL,
-  `fathernum` int(15) NOT NULL,
-  `mothernum` int(15) NOT NULL,
+  `fathernum` bigint(15) NOT NULL,
+  `mothernum` bigint(15) NOT NULL,
   `gname` varchar(150) NOT NULL,
-  `gnum` int(15) NOT NULL,
+  `gnum` varchar(11) NOT NULL,
   `schcategory` varchar(150) NOT NULL,
   `lschname` varchar(250) NOT NULL,
   `lschadd` text NOT NULL,
@@ -71,9 +71,9 @@ CREATE TABLE `personalinfo` (
 --
 
 INSERT INTO `personalinfo` (`id`, `studID`, `password`, `lastname`, `firstname`, `middlename`, `nExtension`, `lrn`, `seks`, `birthdate`, `age`, `address`, `height`, `citizenship`, `weight`, `religion`, `civil_status`, `cpnum`, `email`, `fathername`, `mothername`, `fathernum`, `mothernum`, `gname`, `gnum`, `schcategory`, `lschname`, `lschadd`, `ave`, `course`, `college`, `regStatus`, `studType`, `yrlvl`, `enrollStatus`, `sched`) VALUES
-(34, 202135325, '202135325', 'Depositar', 'Alvy', 'Lustestica', '', 136439070299, 'Female', '2001-08-13', 19, '1215 Mithi', 150, 'Filipino', 45, '', 'Single', 2147483647, 'alvy@gmail.com', 'Alberto Depositar', 'Ivy Depositar', 2147483647, 2147483647, '', 0, 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '94', 'Bachelor of Science in Information Technology', 'CET', 'Regular', 'New', 1, 'Not Yet Enrolled', 2),
-(35, 202135324, '202135324', 'Poliquit', 'Kimberly Jane', 'Agosto', '', 136439070298, 'Female', '2001-09-24', 19, '1626 A. Rivera St.', 150, 'Filipino', 45, 'INC', 'Single', 2147483647, 'kim@gmail.com', 'Alexis Poliquit', 'Lolita Agusto', 2147483647, 2147483647, '', 0, 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '94', 'Bachelor of Science in Civil Engineering', 'CET', 'Regular', 'New', 1, 'Not Yet Enrolled', 2),
-(37, 202169677, '202169677', 'Obmina', 'Jaira Venessa', 'Clayton', '', 136439070297, 'Female', '2002-02-11', 19, '123 Sandico', 152, 'Filipino', 35, 'Roman Catholic', 'Single', 2147483647, 'wyx@gmail.com', 'Hihu Obmina', 'Hihu Clayton', 2147483647, 2147483647, '', 0, 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '93', 'Bachelor of Arts in Communication Major in Public Relations', 'CHASS', 'Regular', 'New', 1, 'Not Yet Enrolled', 3);
+(34, 202135325, 'enebeyen', 'Depositar', 'Alvy', 'Lustestica', '', 136439070299, 'Female', '2001-08-13', 19, '1215 Mithi', 150, 'Filipino', 45, '', 'Single', 9123456789, 'alvy@gmail.com', 'Alberto Depositar', 'Ivy Depositar', 2147483647, 923456789, 'Ivy Depositar', '09123456789', 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '94', 'Bachelor of Science in Information Technology', 'CET', 'Regular', 'New', 1, 'Enrolled', 2),
+(35, 202135324, '202135324', 'Poliquit', 'Kimberly Jane', 'Agosto', '', 136439070298, 'Female', '2001-09-24', 19, '1626 A. Rivera St.', 150, 'Filipino', 45, 'INC', 'Single', 9123456789, 'kim@gmail.com', 'Alexis Poliquit', 'Lolita Agusto', 9123456789, 9123456789, '', '', 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '94', 'Bachelor of Science in Civil Engineering', 'CET', 'Regular', 'New', 1, 'Enrolled', 2),
+(37, 202169677, '202169677', 'Obmina', 'Jaira Venessa', 'Clayton', '', 136439070297, 'Male', '2002-02-11', 19, '123 Sandico', 152, 'Filipino', 35, 'Roman Catholic', 'Single', 9123456789, 'wyx@gmail.com', 'Hihu Obmina', 'Hihu Clayton', 2147483647, 2147483647, '', '', 'SENIOR HIGH SCHOOL', '', '1600 Legarda', '93', 'Bachelor of Arts in Communication Major in Public Relations', 'CHASS', 'Regular', 'New', 1, 'Enrolled', 3);
 
 -- --------------------------------------------------------
 
