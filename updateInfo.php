@@ -1,3 +1,16 @@
+<?php
+	include_once 'config.php';
+	session_start();
+
+	  if (isset($_SESSION['sid'])) {
+		$sid = $_SESSION['sid'];
+
+		$sql = "SELECT * FROM personalinfo WHERE studID = '$sid'";
+
+		$result = mysqli_query($con, $sql);
+		while ($row = mysqli_fetch_assoc($result)){
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,7 +21,7 @@
 		body{
 		background-color: #dbe6fd;
 		}
-				
+
 		.nav2{
 		background-color: white;
 		height: 85px;
@@ -17,7 +30,7 @@
 		float: right;
 		display: inline-block;
 		}
-		
+
 		#bodyContainer{
 		width:70%;
 		background-repeat: no-repeat;
@@ -25,7 +38,7 @@
 		background-color: blue;
 		float: right;
 		}
-				
+
 		ul{
 		top: 40px;
 		bottom: 50px;
@@ -40,10 +53,7 @@
 		padding: 0;
 		overflow: auto;
 		}
-		
-		#content{
-		}
-		
+
 		li a {
 		height: 70px;
 		display: block;
@@ -61,7 +71,7 @@
 		  background-color: #DBE6FD;
 		  color: #293B5F;
 		}
-		
+
 		#mainPanel{
 		top: 40px;
 		background-color: white;
@@ -73,42 +83,35 @@
 		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
-		
-		div{
-		
-		}
+
+
 		.row{
 		margin:auto;
 		width:95%;
-<!-- 		border-style: solid;
-		bordericolor: black; -->
 		}
+
 		.column1{
 		width:22%;
-<!-- 		border-style: solid;
-		border-color: red; -->
+
 		}
 		.column2{
 		margin: 0;
 		width:78%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
+
 		}
-		
+
 		.column3{
 		width:40%;
-<!-- 		border-style: solid;
-		border-color: red; -->
 		}
+
 		.column4{
 		width:58%;
 		margin-left: 2%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
 		}
+
 		h2{
 		margin-top: 30px;
-		color: #293b5f; 
+		color: #293b5f;
 		font-family: "Times New Roman", Times, serif;
 		}
 
@@ -118,6 +121,7 @@
 		text-align: left;
 		font-size: 13px;
 		}
+
 		.c1{
 		width:25%;
 		}
@@ -130,37 +134,37 @@
 		.c5 .c6 .c7{
 		width: 10%;
 		}
-		
+
 		.viewInfoDiv {
 		margin: auto;
 		border: 1px solid #47597E;
 		width: 90%;
 		height: 490px;
 		}
-		
+
 		.viewInfoBg {
 		width:100%;
 		height: 450px;
 		background-color: #B2AB8C;
 		float: right;
 		}
-		
+
 		h5{
 		color: #293B5F;
 		font-family: Sans-Serif;
 		font-weight: bold;
 		margin-left: 10px;
 		}
-		
+
 		div{
 		font-size: 13px;
 		}
-		
+
 		.fieldFont{
 		font-size: 13px;
 		}
-		
-		
+
+
 		.btn{
 		background-color: #293B5F;
 		color: white;
@@ -169,41 +173,48 @@
 		margin-right: 98px;
 		float: right;
 		}
-		
+
 		.btn:hover {
 		background-color: #B2AB8C;
 		color:white;
 		border: 2px solid #47597E;
 		}
-		
+
 		.color{
 		background-color: #293B5F;
 		color: white;
 		font-weight: bold;
 		}
 
-		
+		.font{
+			font-family: Serif;
+			font-size: 18px;
+		}
+
+
 	</style>
-	
+
 	<body>
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
-				<img src="header.png" style="margin-left: 0px;">	
-					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
+				<img src="header.png" style="margin-left: 0px;">
+				<a class="py-2 d-none d-md-inline-block font" name = sid>Student Number: <b><?php echo $sid; ?> </b></a>
 			</nav>
 			<div class="row">
 				<div class="column1">
 					<ul><b>
-					  <li><a href="viewInfo.html">VIEW INFORMATION</a></li>
-					  <li><a class="active" href="updateInfo.html">UPDATE INFORMATION</a></li>
-					  <li><a href="changePassword.html">CHANGE PASSWORD</a></li>
-					  <li><a href="logInTabs">BACK</a></li>					
+					  <li><a href="viewInfo.php">VIEW INFORMATION</a></li>
+					  <li><a class="active" href="updateInfo.php">UPDATE INFORMATION</a></li>
+					  <li><a href="changePassword.php">CHANGE PASSWORD</a></li>
+					  <li><a href="logIntabs.php">BACK</a></li>
 					</ul></b>
 				</div>
 				<div class="column2">
 					<div id="mainPanel">
 						<div class="container-fluid py-2">
-							<form method="POST" action="s_perinfo.php">
+
+							<form method="POST" action="s_updateinfo.php">
+
 								<h5 style="margin-top: 5px;">PERSONAL INFORMATION</h5>
 								<div class="row ml-2">
 
@@ -212,34 +223,28 @@
 									</div>
 									<div class="col-md-3">
 										<div class="form-group">
-											<input type="text" readonly class="form-control-plaintext color fieldFont" cname="fname" >
+											<input type="text" readonly class="form-control-plaintext color fieldFont" name="fname" value="<?php echo $row['firstname']; ?>">
 											<p class="text-center">FIRST NAME*</p>
 										</div>
 									</div>
 
 									<div class="col-md-3">
 										<div class="form-group ">
-											<input type="text" readonly class="form-control-plaintext color fieldFont" name="mname" >
+											<input type="text" readonly class="form-control-plaintext color fieldFont" name="mname" value="<?php echo $row['middlename']; ?>">
 											<p class="text-center">MIDDLE NAME*</p>
 										</div>
 									</div>
 
 									<div class="col-md-3">
 										<div class="form-group">
-											<input type="text" readonly class="form-control-plaintext color fieldFont" name="lname" >
+											<input type="text" readonly class="form-control-plaintext color fieldFont" name="lname" value="<?php echo $row['lastname']; ?>">
 											<p class="text-center">LAST NAME*</p>
 										</div>
 									</div>
 
 									<div class="col-md-2">
 										<div class="form-group">
-											<select class="custom-select color fieldFont" name="ext" >
-																				<option> </option>
-																				<option>Jr.</option>
-																				<option>Sr.</option>
-																				<option>III</option>
-																				<option>IV</option>
-											</select>
+											<input type="text" readonly class="form-control-plaintext color fieldFont" name="ext" value="<?php echo $row['nExtension']; ?>">
 											<p class="text-center">NAME EXTENSION</p>
 										</div>
 									</div>
@@ -251,7 +256,7 @@
 											<div class="col-md-5">LEARNING REFERENCE NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="lrn">
+													<input type="text" readonly class="form-control-plaintext color fieldFont" name="lrn" value="<?php echo $row['lrn']; ?>">
 												</div>
 											</div>
 										</div>
@@ -260,7 +265,7 @@
 											<div class="col-md-5">BIRTHDATE (YEAR/MONTH/DATE)*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="date" class="form-control fieldFont" name="bday" required>
+													<input type="date" class="form-control fieldFont" name="bday" readonly value="<?php echo $row['birthdate']; ?>">
 												</div>
 											</div>
 										</div>
@@ -269,7 +274,7 @@
 											<div class="col-md-5">ADDRESS*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="address" required>
+													<input type="text" class="form-control fieldFont" name="address" required value="<?php echo $row['address']; ?>">
 												</div>
 											</div>
 										</div>
@@ -278,7 +283,7 @@
 											<div class="col-md-5">CITIZENSHIP*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="citi" required>
+													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="citi" required readonly value="<?php echo $row['citizenship']; ?>">
 												</div>
 											</div>
 										</div>
@@ -287,7 +292,7 @@
 											<div class="col-md-5">RELIGION</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="rel">
+													<input type="text" class="form-control fieldFont" name="rel" readonly value="<?php echo $row['religion']; ?>">
 												</div>
 											</div>
 										</div>
@@ -296,7 +301,7 @@
 											<div class="col-md-5">CELLPHONE NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="tel" class="form-control fieldFont" name="cpnum" required>
+													<input type="tel" class="form-control fieldFont" name="cpnum" required value="<?php echo $row['cpnum']; ?>">
 												</div>
 											</div>
 										</div>
@@ -306,13 +311,8 @@
 										<div class="row">
 											<div class="col-md-4">SEX*</div>
 											<div class="col-md-8">
-												<div class="form-group text-left">
-													<div class="form-radio form-radio-inline" >
-														<input class="form-radio-input" type="radio" name ="sex" value="Male" required>
-														<label class="form-radio-label" for="sex">Male</label>
-														<input class="form-radio-input" type="radio" name="sex" value="Female" required>
-														<label class="form-radio-label" for="sex">Female</label>
-													  </div>
+												<div class="form-group">
+													<input type="text" class="form-control fieldFont" name="age" required readonly value="<?php echo $row['seks']; ?>">
 												</div>
 											</div>
 										</div>
@@ -321,7 +321,7 @@
 											<div class="col-md-4">AGE*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<input type="number" class="form-control fieldFont" name="age" required>
+													<input type="number" class="form-control fieldFont" name="age" required value="<?php echo $row['age']; ?>">
 												</div>
 											</div>
 										</div>
@@ -330,7 +330,7 @@
 											<div class="col-md-4">HEIGHT (cm)*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<input type="number" class="form-control fieldFont" step=".01" name="he" required>
+													<input type="number" class="form-control fieldFont" step=".01" name="he" required value="<?php echo $row['height']; ?>">
 												</div>
 											</div>
 										</div>
@@ -339,7 +339,7 @@
 											<div class="col-md-4">WEIGHT (kg)*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="we" required>
+													<input type="text" class="form-control fieldFont" name="we" required value="<?php echo $row['weight']; ?>">
 												</div>
 											</div>
 										</div>
@@ -348,7 +348,7 @@
 											<div class="col-md-4">CIVIL STATUS*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<select class="custom-select fieldFont" name="cs" required>
+													<select class="custom-select fieldFont" name="cs" required value="<?php echo $row['civil_status']; ?>">
 														<option>Single</option>
 														<option>Married</option>
 														<option>Widowed</option>
@@ -362,7 +362,7 @@
 											<div class="col-md-4">EMAIL ADDRESS*</div>
 											<div class="col-md-8">
 												<div class="form-group">
-													<input type="email" class="form-control fieldFont" name="email" required>
+													<input type="email" class="form-control fieldFont" name="email" required value="<?php echo $row['email']; ?>">
 												</div>
 											</div>
 										</div>
@@ -377,7 +377,7 @@
 											<div class="col-md-5">FATHER'S NAME*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="fathname" required>
+													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="fathname" required value="<?php echo $row['fathername']; ?>">
 												</div>
 											</div>
 										</div>
@@ -386,7 +386,7 @@
 											<div class="col-md-5">CONTACT NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="fathnum" required>
+													<input type="text" class="form-control fieldFont" name="fathnum" required value="<?php echo $row['fathernum']; ?>">
 												</div>
 											</div>
 										</div>
@@ -395,7 +395,7 @@
 											<div class="col-md-5">GUARDIAN'S NAME</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="gname">
+													<input type="text" class="form-control fieldFont" name="gname" value="<?php echo $row['gname']; ?>">
 												</div>
 											</div>
 										</div>
@@ -406,7 +406,7 @@
 											<div class="col-md-5">MOTHER'S NAME*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="mothname" required>
+													<input type="text" readonly class="form-control-plaintext color fieldFont"  name="mothname" required value="<?php echo $row['mothername']; ?>">
 												</div>
 											</div>
 										</div>
@@ -415,7 +415,7 @@
 											<div class="col-md-5">CONTACT NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="mothnum" required>
+													<input type="text" class="form-control fieldFont" name="mothnum" required value="<?php echo $row['mothernum']; ?>">
 												</div>
 											</div>
 										</div>
@@ -424,26 +424,24 @@
 											<div class="col-md-5">GUARDIAN'S NUMBER</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="gnum">
+													<input type="text" class="form-control fieldFont" name="gnum" value="<?php echo $row['gnum']; ?>">
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</form>
+
 						</div>
 						 <div>
 							<button type="submit" class="btn btn-outline-dark" name="submit" > Update</button>
+							</form>
 						</div>
 					</div>
 				</div>
-			</div>	
-			
-			
-			
-				
+			</div>
 
-		    
+
+
 			<footer class="container">
 			  <center><p>© Company 2021-2022</p></center>
 			</footer>
@@ -452,3 +450,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
+<?php }
+} else {
+	header('location: login.php');
+	exit();
+}
+?>

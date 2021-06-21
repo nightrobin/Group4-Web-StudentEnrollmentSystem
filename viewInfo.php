@@ -1,3 +1,18 @@
+<?php
+	include_once 'config.php';
+	session_start();
+
+	  if (isset($_SESSION['sid'])) {
+		$sid = $_SESSION['sid'];
+
+		$sql = "SELECT * FROM personalinfo WHERE studID = '$sid'";
+
+		$result = mysqli_query($con, $sql);
+		while ($row = mysqli_fetch_assoc($result)){
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -80,31 +95,26 @@
 		.row{
 		margin:auto;
 		width:95%;
-<!-- 		border-style: solid;
-		bordericolor: black; -->
+		border-color: black;
 		}
 		.column1{
 		width:22%;
-<!-- 		border-style: solid;
-		border-color: red; -->
+
 		}
 		.column2{
 		margin: 0;
 		width:78%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
+
 		}
 
 		.column3{
 		width:40%;
-<!-- 		border-style: solid;
-		border-color: red; -->
+
 		}
 		.column4{
 		width:58%;
 		margin-left: 2%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
+
 		}
 		h2{
 		margin-top: 30px;
@@ -145,18 +155,24 @@
 		float: right;
 		}
 
+		.font{
+			font-family: Serif;
+			font-size: 18px;
+		}
+
+
 	</style>
 
 	<body>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
 				<img src="header.png" style="margin-left: 0px;">
-					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
+				<a class="py-2 d-none d-md-inline-block font" name = sid>Student Number: <b><?php echo $sid; ?> </b></a>
 			</nav>
 			<div class="row">
 				<div class="column1">
 					<ul><b>
-					  <li><a class="active" href="#home">VIEW INFORMATION</a></li>
-					  <li><a href="#news">UPDATE INFORMATION</a></li>
+					  <li><a class="active" href="viewInfo.php">VIEW INFORMATION</a></li>
+					  <li><a href="updateInfo.php">UPDATE INFORMATION</a></li>
 					  <li><a href="#contact">CHANGE PASSWORD</a></li>
 					  <li><a href="#about">BACK</a></li>
 					</ul></b>
@@ -178,55 +194,55 @@
 											<br>
 											<tr>
 												<td style="width:50%;"><b>Student Number:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['studID']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Last Name:</b></td>
-												<td><b>...</td>
+												<td><b><?php echo $row['lastname']; ?></td>
 											</tr>
 											<tr>
 												<td><b>First Name:</b></td>
-												<td><b>...</td>
+												<td><b><?php echo $row['firstname'] . $row['nExtension']; ?></td>
 											</tr>
 											<tr>
 												<td><b>Middle Name:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['middlename']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Sex:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['seks']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Civil Status:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['civil_status']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Citizenship:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['citizenship']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Student Type:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['studType']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Registration Status:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['regStatus']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Degree Program:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['course']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Year Level:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['yrlvl']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Personal Email:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['email']; ?></b></td>
 											</tr>
 											<tr>
 												<td><b>Cellphone Number:</b></td>
-												<td><b>...</b></td>
+												<td><b><?php echo $row['cpnum']; ?></b></td>
 											</tr>
 										</table>
 									</div>
@@ -242,3 +258,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
+<?php
+}
+} else {
+	header('location: login.php');
+	exit();
+}?>
