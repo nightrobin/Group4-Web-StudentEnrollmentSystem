@@ -386,7 +386,7 @@
 											<div class="col-md-5">CONTACT NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="fathnum" required value="<?php echo $row['fathernum']; ?>">
+													<input type="tel" class="form-control fieldFont" name="fathnum" required value="<?php echo $row['fathernum']; ?>">
 												</div>
 											</div>
 										</div>
@@ -415,7 +415,7 @@
 											<div class="col-md-5">CONTACT NUMBER*</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="mothnum" required value="<?php echo $row['mothernum']; ?>">
+													<input type="tel" class="form-control fieldFont" name="mothnum" required value="<?php echo $row['mothernum']; ?>">
 												</div>
 											</div>
 										</div>
@@ -424,7 +424,7 @@
 											<div class="col-md-5">GUARDIAN'S NUMBER</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="gnum" value="<?php echo $row['gnum']; ?>">
+													<input type="tel" class="form-control fieldFont" name="gnum" value="<?php echo $row['gnum']; ?>">
 												</div>
 											</div>
 										</div>

@@ -87,26 +87,18 @@
 		.row{
 		margin:auto;
 		width:95%;
-<!-- 	border-style: solid;
-		bordericolor: black; -->
 		}
 		.column1{
 		width:22%;
-<!-- 	border-style: solid;
-		border-color: red; -->
 		}
 		.column2{
 		margin: 0;
 		width:78%;
-<!-- 	border-style: solid;
-		bordericolor: blue; -->
 		}
-	}
+
 		.column3{
 		margin: 0;
 		width:78%;
-<!-- 	border-style: solid;
-		bordericolor: blue; -->
 		}
 		h2{
 		margin-top: 30px;
@@ -147,6 +139,10 @@
 		border-color: black;
 		width: 100%;
 		height: 30px;
+		}
+		.font{
+			font-family: Serif;
+			font-size: 18px;
 		}
 
 

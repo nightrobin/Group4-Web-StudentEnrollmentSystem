@@ -15,79 +15,79 @@
       		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       	</head>
       	<style>
-      		body{
-      		background-color: #dbe6fd;
-      		}
-      		.nav-color{
-      		background-color: #293b5f;
-      		}
-      		.nav2{
-      		background-color: white;
-      		top: 56px;
-      		height: 85px;
-      		}
-      		.button-color{
-      		background-color:white;
-      		color: black;
-      		}
-      		.button-color:hover{
-      		background-color: #47597e;
-      		color: white;
-      		border-color: #dbe6fd;
-      		}
+        body{
+        background-color: #dbe6fd;
+        }
+        .nav-color{
+        background-color: #293b5f;
+        }
+        .nav2{
+        background-color: white;
+        top: 56px;
+        height: 85px;
+        }
+        .button-color{
+        background-color:white;
+        color: black;
+        }
+        .button-color:hover{
+        background-color: #47597e;
+        color: white;
+        border-color: #dbe6fd;
+        }
 
-      		.btn-outline-secondary:hover{
-      		color: white;
-      		border-color: #dbe6fd;
-      		}
+        .btn-outline-secondary:hover{
+        color: white;
+        border-color: #dbe6fd;
+        }
 
-      		.image{
-      		border-style: solid;
-      		border:7px solid #45352D;
-      		border-radius: 50%;
-      		}
+        .image{
+        border-style: solid;
+        border:7px solid #45352D;
+        border-radius: 50%;
+        }
 
-      		#bodyContainer{
-      		width:100%;
-      		background-image: url("bg2.png");
-      		background-repeat: no-repeat;
-      		background-size: cover;
-      		}
+        #bodyContainer{
+        width:100%;
+        background-image: url("bg2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
 
-      		div.one{
-      		border-radius: 25px;
-      		width: 50%;
-      		padding: 20px;
-      		margin: auto;
-      		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      		background: rgb(219, 230, 253, 0.6)
-      		}
+        div.one{
+        border-radius: 25px;
+        width: 50%;
+        padding: 20px;
+        margin: auto;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background: rgb(219, 230, 253, 0.6)
+        }
 
-      		#clearfieldBtn{
-      		background-color: #D4AF37;
-      		color: white;
-      		}
+        #clearfieldBtn{
+        background-color: #D4AF37;
+        color: white;
+        }
 
-      		#clearfieldBtn:hover{
-      		background-color:#47597e;
-      		border-color: #dbe6fd;
-      		}
+        #clearfieldBtn:hover{
+        background-color:#47597e;
+        border-color: #dbe6fd;
+        }
 
-      		#loginBtn{
-      		background-color: #D4AF37;
-      		color: white;
-      		}
+        #loginBtn{
+        background-color: #D4AF37;
+        color: white;
+        }
 
-      		#loginBtn:hover{
-      		background-color:#47597e;
-      		border-color: #dbe6fd;
-      		}
+        #loginBtn:hover{
+        background-color:#47597e;
+        border-color: #dbe6fd;
+        }
 
-      		.navActive{
-      		font-weight: bold;
-      		color: #293b5f;
-      		text-decoration: underline;
-      		}
+        .navActive{
+        font-weight: bold;
+        color: #293b5f;
+        text-decoration: underline;
+        }
 
       	</style>
 
@@ -180,8 +180,8 @@
 
                       </form>
 
-      									<div class="col-4">
-      										<a href="login.php"><button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" id="loginBtn">Back to Log In</button></a>
+                      <div  class="justify-content-center" style="width: 50%; margin: auto;">
+                          <a href="login.php"><button class="btn btn-sm btn-primary custom btn-outline-secondary btn-block" id="loginBtn">Back to Log In</button></a>
       									</div>
       								</div>
       									<br>

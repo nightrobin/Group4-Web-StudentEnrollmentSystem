@@ -139,7 +139,11 @@
 		.c6 .c7{
 		width: 15%;
 		}
-		
+		.font{
+			font-family: Serif;
+			font-size: 18px;
+		}
+
 	</style>
 
 	<body>

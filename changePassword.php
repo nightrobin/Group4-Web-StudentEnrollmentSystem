@@ -55,9 +55,6 @@
 		overflow: auto;
 		}
 
-		#content{
-		}
-
 		li a {
 		height: 70px;
 		display: block;
@@ -109,13 +106,12 @@
 		.column4{
 		width:58%;
 		margin-left: 2%;
-<!-- 	border-style: solid;
-		bordericolor: blue;
 		}
-        h3{
-        margin-top: 25%;
-        text-align: center;
-        }
+
+		h3{
+    margin-top: 25%;
+    text-align: center;
+    }
 
 		td{
 		height: 30px;
@@ -123,18 +119,19 @@
 		text-align: left;
 		font-size: 13px;
 		}
+
 		.td2{
-        color: white;
-        font-size:13px;
-        text-align: left;
+    color: white;
+    font-size:13px;
+    text-align: left;
 		padding: 3%;
 		width:40%;
-        }
+    }
 
 		.changePasswordDiv {
 		margin: auto;
 		border: 1px solid #47597E;
-        border-style: solid;
+    border-style: solid;
 		width: 90%;
 		height: 450px;
 		}
@@ -143,7 +140,7 @@
 		width: 85%;
 		height: 280px;
 		background-color: #B2AB8C;
-        border:1px solid black;
+  	border:1px solid black;
 		float: 50%;
 		}
 
@@ -161,14 +158,14 @@
 			border-radius: 5px;
 			text-align: center;
 		}
-		
+
 		.updatebtn{
 			background-color: #293B5F;
 			color: white;
 			height: 30px;
 			border: 1px solid #DBE6FD;
 		}
-		
+
 		.updatebtn:hover {
 			background-color: #47597E;
 			color: white;
@@ -176,73 +173,6 @@
 		}
 
 	</style>
-
-	<!-- <script language = JavaScript>
-
-        function InputCheck(frm)
-        {
-         var errmsg='';
-         var txtfield=null;
-		 var newpstring=frm.newP.value;
-
-         if (frm.oldP.value=='' || frm.newP.value=='' || frm.confP.value=='')
-         {
-          errmsg+='\n no password field can be left empty!';
-          if(txtfield==null)
-          {
-           txtfield=frm.oldP;
-          }
-         }
-         else
-         {
-          if (frm.newP!='' && newpstring.length<8)
-          {
-           errmsg+='\n new password cannot be less than 8 characters!';
-           if(txtfield==null)
-           {
-            txtfield=frm.newP;
-           }
-          }
-         }
-
-         if (frm.oldP.value!='' && frm.dbpass.value!=frm.oldP.value)
-         {
-          errmsg+='\n current password input is incorrect!';
-          if(txtfield==null)
-          {
-           txtfield=frm.oldP;
-          }
-         }
-
-         if (frm.oldP.value!='' && frm.oldP.value==frm.newP.value)
-         {
-          errmsg+='\n new password is just the same as the current password';
-          if(txtfield==null)
-          {
-           txtfield=frm.newP;
-          }
-         }
-
-         if (frm.newP.value!='' && frm.newP.value!=frm.confP.value)
-         {
-          errmsg+='\n new password and confirmation password do not match!';
-          if(txtfield==null)
-          {
-           txtfield=frm.confP;
-          }
-         }
-
-         if (errmsg!='' || errmsg2!='')
-         {
-          if (errmsg!='')
-           alert('ERROR: ' + errmsg);
-
-          txtfield.focus();
-          return false;
-         }
-        }
-
-        </script> -->
 
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">

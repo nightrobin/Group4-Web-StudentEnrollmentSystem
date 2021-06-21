@@ -123,29 +123,29 @@
 		.c2{
 		text-align:center;
 		}
-		
+
 		.c4{
 		text-align:center;
 		}
-		
+
 		.c3{
 		width: 35%;
 		font-family: sans-serif;
 		padding-left: 5px;
 		}
-		
+
 		.c5{
 		padding-left: 5px;
-		}		
-		
+		}
+
 		.c6{
 		padding-left: 5px;
-		}		
-		
+		}
+
 		.c7{
 		padding-left: 5px;
 		}
-		
+
 
 		.Bg {
 		margin: auto;
@@ -164,14 +164,19 @@
 		border: 2px solid black;
 		}
 
+		.font{
+			font-family: Serif;
+			font-size: 18px;
+		}
+
 		.font2{
 		font-family: serif;
 		font-size: 17px;
 		font-weight: bold;
 		}
-		
+
 		.font3{
-		font-family: Serif; 
+		font-family: Serif;
 		font-size: 12px;
 		}
 
