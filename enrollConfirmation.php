@@ -1,3 +1,12 @@
+<?php
+	include_once 'config.php';
+	session_start();
+
+	  if (isset($_SESSION['sid'])) {
+		$sid = $_SESSION['sid'];
+
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,7 +17,7 @@
 		body{
 		background-color: #dbe6fd;
 		}
-				
+
 		.nav2{
 		background-color: white;
 		height: 85px;
@@ -17,7 +26,7 @@
 		float: right;
 		display: inline-block;
 		}
-		
+
 		#bodyContainer{
 		width:70%;
 		background-repeat: no-repeat;
@@ -25,7 +34,7 @@
 		background-color: blue;
 		float: right;
 		}
-				
+
 		ul{
 		top: 40px;
 		bottom: 50px;
@@ -40,10 +49,10 @@
 		padding: 0;
 		overflow: auto;
 		}
-		
+
 		#content{
 		}
-		
+
 		li a {
 		height: 70px;
 		display: block;
@@ -61,7 +70,7 @@
 		  background-color: #DBE6FD;
 		  color: #293B5F;
 		}
-		
+
 		#mainPanel{
 		top: 40px;
 		background-color: white;
@@ -73,41 +82,31 @@
 		position: relative;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
-		
+
 		div{
-		
+
 		}
 		.row{
 		margin:auto;
 		width:95%;
-<!-- 		border-style: solid;
-		bordericolor: black; -->
 		}
 		.column1{
 		width:22%;
-<!-- 		border-style: solid;
-		border-color: red; -->
 		}
 		.column2{
 		margin: 0;
 		width:78%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
 		}
-		
+
 		.column3{
 		width:40%;
-<!-- 		border-style: solid;
-		border-color: red; -->
 		}
 		.column4{
 		width:58%;
 		margin-left: 2%;
-<!-- 		border-style: solid;
-		bordericolor: blue; -->
 		}
 		h1{
-		color: white; 
+		color: white;
 		font-family: Sans-serif;
 		text-align: center;
 		}
@@ -125,8 +124,8 @@
 		.c5 .c6 .c7{
 		width: 10%;
 		}
-		
-		
+
+
 		.Bg {
 		margin: auto;
 		position: relative;
@@ -137,24 +136,22 @@
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		}
 
-
-		
 	</style>
-	
+
 	<body>
 		</nav>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top nav-color nav2 d-flex flex-column flex-md-row justify-content-between">
-				<img src="header.png" style="margin-left: 0px;">	
+				<img src="header.png" style="margin-left: 0px;">
 					<a class="py-2 d-none d-md-inline-block" href="index.html">LOGOUT</a>
 			</nav>
 			<div class="row">
 				<div class="column1">
 					<ul><b>
-					  <li><a href="viewSched.html">VIEW SCHEDULE</a></li>
-					  <li><a href="viewAssessment.html">VIEW ASSESSMENT</a></li>
-					  <li><a class="active" href="#contact">REGISTER</a></li>
-					  <li><a href="#about">VIEW REGISTRATION FORM</a></li>	
-					  <li><a href="#about">BACK</a></li>						
+					  <li><a href="viewSched.php">VIEW SCHEDULE</a></li>
+					  <li><a href="viewAssessment.php">VIEW ASSESSMENT</a></li>
+					  <li><a class="active" href="enrollConfirmation.php">REGISTER</a></li>
+					  <li><a href="viewRegform.php">VIEW REGISTRATION FORM</a></li>
+					  <li><a href="logintabs.php">BACK</a></li>
 					</ul></b>
 				</div>
 				<div class="column2">
@@ -166,10 +163,10 @@
 							<p style="text-align: center; color: white;"> Start of Class will be on March 15, 2021</p>
 								<br>
 							<p style="text-align: center; color: white; font-size: 12px;">You may now proceed to save your registration form.</p>
-						</div> 
+						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 			<footer class="container">
 			  <center><p>© Company 2021-2022</p></center>
 			</footer>
@@ -178,3 +175,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	</body>
 </html>
+<?php
+} else {
+	header('location: login.php');
+	exit();
+}
+ ?>
