@@ -164,7 +164,7 @@
 						<div class="Bg">
 								<br>
 							<h1>You are officially enrolled!</h1>
-							<p style="text-align: center; color: white;"> Start of Class will be on March 15, 2021</p>
+							<p style="text-align: center; color: white;"> Start of Class will be on March 15, 2020</p>
 								<br>
 							<p style="text-align: center; color: white; font-size: 12px;">You may now proceed to save your registration form.</p>
 						</div>
