@@ -129,7 +129,7 @@
 			font-family: Serif;
 			font-size: 18px;
 		}
-		
+
 		.Bg {
 		margin: auto;
 		position: relative;

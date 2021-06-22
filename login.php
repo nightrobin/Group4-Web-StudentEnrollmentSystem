@@ -135,6 +135,22 @@
 									<label for="password">Password</label>
 								  </div>
 
+									<div class="form-label-group">
+									<input type="checkbox" onclick="myFunction()">Show Password
+									</div>
+
+									<script>
+									function myFunction() {
+										var x = document.getElementById("pww");
+										if (x.type === "password") {
+											x.type = "text";
+										} else {
+											x.type = "password";
+										}
+									}
+									</script>
+
+									<br>
 									<button class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" name="login" type="submit">Log in</button>
 									<a href="perinfo.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Register</a>
 									<a href="checkResults.php" class="btn btn-lg btn-primary btn-outline-secondary btn-block" id="loginBtn" type="button">Check Result</a><br><br>

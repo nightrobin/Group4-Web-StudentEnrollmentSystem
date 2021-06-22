@@ -17,6 +17,7 @@
 	<head>
 		<title> Robinson University </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	</head>
 	<style>
 		body{
@@ -124,7 +125,7 @@
     color: white;
     font-size:13px;
     text-align: left;
-		padding: 3%;
+		padding: 2%;
 		width:40%;
     }
 
@@ -171,6 +172,7 @@
 			color: white;
 			border: 1px solid #293B5F;
 		}
+
 
 	</style>
 
@@ -219,24 +221,57 @@
                                                 <tr>
                                                     <td class="td2">Current Password: </td>
                                                     <td>
-														<input style="float: right;" type=password name="oldpass" maxlength=20 min="8" size=35 required>
+														<input style="float: right;" type=password name="oldpass" id="pww" maxlength=20 min="8" size=35 required>
                                                     </td>
+																										<td class="td"><i class="far fa-eye" id="togglePassword" style="margin-left: 5px; cursor: pointer;"></i></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="td2">New Password: </td>
                                                     <td>
-														<input style="float: right;" type=password name="newpass" maxlength=20 min="8" size=35 required>
+														<input style="float: right;" type=password name="newpass"  id="pw1"maxlength=20 min="8" size=35 required>
+
                                                     </td>
+																										<td class="td"><i class="far fa-eye" id="togglePassword1" style="margin-left: 5px; cursor: pointer;"></i></td>
+
+																										<td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="td2"> Confirm Password: </td>
                                                     <td>
-														<input style="float: right;" type=password name="confpass" maxlength=20 size=35 required>
+														<input style="float: right;" type=password name="confpass" id="pw2" maxlength=20 size=35 required>
                                                     </td>
+																										<td class="td"><i class="far fa-eye" id="togglePassword2" style="margin-left: 5px; cursor: pointer;"></i></td>
                                                 </tr>
                                                 <tr><td><br></td></tr>
+
+																								<script>
+																								const togglePassword = document.querySelector('#togglePassword');
+																								const password = document.querySelector('#pww');
+																								togglePassword.addEventListener('click', function (e) {
+																									const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+																									password.setAttribute('type', type);
+																									this.classList.toggle('fa-eye-slash');
+																								});
+
+																								const togglePassword1 = document.querySelector('#togglePassword1');
+																								const password1 = document.querySelector('#pw1');
+																								togglePassword1.addEventListener('click', function (e) {
+																									const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+																									password1.setAttribute('type', type);
+																									this.classList.toggle('fa-eye-slash');
+																								});
+
+																								const togglePassword2 = document.querySelector('#togglePassword2');
+																								const password2 = document.querySelector('#pw2');
+																								togglePassword2.addEventListener('click', function (e) {
+																									const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+																									password2.setAttribute('type', type);
+																									this.classList.toggle('fa-eye-slash');
+																								});
+																								</script>
+
                                                 <tr>
-                                                    <td style="text-align:center;" colspan=2>
+                                                    <td style="text-align:center;" colspan=3>
 														<input type= "submit" name="update" value="UPDATE PASSWORD"  class="updatebtn">
                                                     </td>
                                                 </tr>

@@ -173,8 +173,8 @@
 					<ul><b>
 					  <li><a class="active" href="viewInfo.php">VIEW INFORMATION</a></li>
 					  <li><a href="updateInfo.php">UPDATE INFORMATION</a></li>
-					  <li><a href="#contact">CHANGE PASSWORD</a></li>
-					  <li><a href="#about">BACK</a></li>
+					  <li><a href="changePassword.php">CHANGE PASSWORD</a></li>
+					  <li><a href="logIntabs.php">BACK</a></li>
 					</ul></b>
 				</div>
 				<div class="column2">
