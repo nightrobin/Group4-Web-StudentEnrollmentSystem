@@ -17,12 +17,13 @@
     $cs = $_POST['cs'];
     $cp = $_POST['cpnum'];
     $email = $_POST['email'];
+    $rel = $_POST['rel'];
     $fnum = $_POST['fathnum'];
     $mnum = $_POST['mothnum'];
     $gname = $_POST['gname'];
     $gnum = $_POST['gnum'];
 
-    $sql = "UPDATE personalinfo SET age = '$age', address = '$ad', height = '$hei', weight = '$wei', civil_status ='$cs', cpnum = '$cp',
+    $sql = "UPDATE personalinfo SET age = '$age', address = '$ad', religion = '$rel', height = '$hei', weight = '$wei', civil_status ='$cs', cpnum = '$cp',
             email = '$email', email = '$email', fathernum = '$fnum', mothernum = '$mnum', gname = '$gname', gnum = '$gnum' WHERE studID= $sid";
 
     if (mysqli_query($con, $sql)) {

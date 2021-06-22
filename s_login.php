@@ -19,11 +19,14 @@ if (isset($_POST['sid']) && isset($_POST['pw'])) {
 
       if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);
-        if ($row['studID'] === $sid && $row['password'] === $pw) {
+        if ($sid == '2021' && $pw == '2021') {
+          header("location: login.php?error=Incorrect Student Number or Password");
+          exit();
+        } else if ($row['studID'] === $sid && $row['password'] === $pw){
           $_SESSION['sid'] = $row['studID'];
           header('location: logintabs.php');
           exit();
-        } else {
+        }else {
           header("location: login.php?error=Incorrect Student Number or Password");
           exit();
         }

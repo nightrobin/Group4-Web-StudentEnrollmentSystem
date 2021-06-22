@@ -131,7 +131,7 @@
 								  </div>
 
 								  <div class="form-label-group">
-									<input type="password" name="pw" class="form-control" placeholder="Password" required>
+									<input type="password" name="pw" class="form-control" id="pww" placeholder="Password" required>
 									<label for="password">Password</label>
 								  </div>
 

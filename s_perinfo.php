@@ -19,7 +19,7 @@ if($_POST){
   	$results = mysqli_query($con, $sql);
   	if (mysqli_num_rows($results) > 0) {
   	  echo '<script>alert("You are already registered.") </script>';
-      echo '<script>window.location = "login.php"</script>';
+      echo '<script>window.location = "perinfo.php"</script>';
     }
      else {
           $fname = $_POST['fname'];

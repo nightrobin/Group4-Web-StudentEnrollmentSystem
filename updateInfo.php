@@ -292,7 +292,7 @@
 											<div class="col-md-5">RELIGION</div>
 											<div class="col-md-7">
 												<div class="form-group">
-													<input type="text" class="form-control fieldFont" name="rel" style=" background-color: #293B5F;" readonly value="<?php echo $row['religion']; ?>">
+													<input type="text" class="form-control fieldFont" name="rel" value="<?php echo $row['religion']; ?>">
 												</div>
 											</div>
 										</div>
