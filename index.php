@@ -106,18 +106,18 @@
 
 					<div class="row">
 						<div class="col-md-4">
-							<h2>Info</h2>
-								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+							<h2>Announcement</h2>
+								<p style="text-align: justify;"> Join us for “Digital Wellbeing: Mental Health Amidst Virtual Engagements” webinar on June 7, 2021, 1:30 PM via MS Teams. Resource speakers Ms. Carolyn Cruz Quiba will present how technologies can work to our advantage while promoting mental health and digital well-being. </p>
 								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
 						</div>
 						<div class="col-md-4">
-							<h2>Info</h2>
-								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+							<h2>News</h2>
+								<p style="text-align: justify;"> No one had a 2020 vision of what this year that is about to end would bring. Our experiences have been difficult but we have a lot more to be grateful for and be hopeful of this coming year. The pandemic spared no one. PLM lost some lives and some got seriously ill from the virus.</p>
 								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
 						</div>
 						<div class="col-md-4">
-							<h2>Info</h2>
-								<p> This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about This container contains information about.</p>
+							<h2>Updates</h2>
+								<p style="text-align: justify;"> Internet access on campus and RU’s locally-hosted web services will be temporarily interrupted on May 24 due to the scheduled maintenance activity. However, the website (plm.edu.ph), Outlook, OneDrive, and MS Teams will remain accessible during this time.</p>
 								<p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
 						</div>
 					</div>
