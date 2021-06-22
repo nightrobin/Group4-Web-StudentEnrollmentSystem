@@ -228,7 +228,7 @@
                                                 <tr>
                                                     <td class="td2">New Password: </td>
                                                     <td>
-														<input style="float: right;" type=password name="newpass"  id="pw1"maxlength=20 min="8" size=35 required>
+														<input style="float: right;" type=password name="newpass"  id="pw1"maxlength=20 size=35 required>
 
                                                     </td>
 																										<td class="td"><i class="far fa-eye" id="togglePassword1" style="margin-left: 5px; cursor: pointer;"></i></td>

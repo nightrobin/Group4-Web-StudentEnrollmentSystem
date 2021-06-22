@@ -27,12 +27,13 @@ $sid = $_SESSION['sid'];
       } else if($op === $np) {
         header("location: changePassword.php?error=New Password should be different from the previous one.");
         exit();
-      } else if (strlen($np) < 8) {
-        header("location: changePassword.php?error=Password must be 8 or more characters.");
+      } else if (strlen($np) < 8 && strlen($np) > 20) {
+        header("location: changePassword.php?error=Password must be 8 to 20 characters.");
         exit();
       } else if ($op != $row['password']) {
         header("location: changePassword.php?error=Current Password is incorrect.");
         exit();
+
       } else {
         $sql = "UPDATE personalinfo SET password = '$np' WHERE studID= '$sid'";
         if (mysqli_query($con, $sql)) {
