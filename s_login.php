@@ -31,7 +31,7 @@ if (isset($_POST['sid']) && isset($_POST['pw'])) {
           exit();
         }
       } else {
-        header("location: login.php?error=No Record found.");
+        header("location: login.php?error=Incorrect Student Number or Password.");
         exit();
       }
 }
